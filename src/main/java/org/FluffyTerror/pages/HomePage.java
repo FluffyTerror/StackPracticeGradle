@@ -32,20 +32,20 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "//div[@class='css-pxyno3']//p[contains(text(), 'Первоначальный взнос')]/following-sibling::input[@type='text']")
     private WebElement inputInitialSumValue;
 
-    @FindBy(css = "a.chakra-link.css-vg2g2m a[href='/career']")
+    @FindBy(xpath = "//h3[@class = 'css-bipdn9']/span[contains(text(),'Карьера в БСПБ')]")
     private WebElement career;
 
     //
-    @FindBy(xpath = "//a[@class = 'chakra-link css-31y7ng']/ span[contains(text(),'Программа «Квартира»')]")
+    @FindBy(xpath = "//h3[@class = 'css-bipdn9']/ span[contains(text(),'Программа «Квартира»')]")
     private WebElement mortgageCard;
 
-    @FindBy(xpath = "//a[@class = 'chakra-link css-31y7ng']/ span[contains(text(),'Карта Серебряный возраст')]")
+    @FindBy(xpath = "//h3[@class = 'css-bipdn9']/ span[contains(text(),'Карта Серебряный возраст')]")
     private WebElement silverAgeCard;
 
-    @FindBy(xpath = "//a[@class = 'chakra-link css-31y7ng']/ span[contains(text(),'Программа лояльности ЯРКО')]")
+    @FindBy(xpath = "//h3[@class = 'css-bipdn9']/ span[contains(text(),'Программа лояльности ЯРКО')]")
     private WebElement loyaltyCard;
 
-    @FindBy(xpath = "//a[@class = 'chakra-link css-31y7ng']/ span[contains(text(),'Пенсионное обслуживание')]")
+    @FindBy(xpath = "//h3[@class = 'css-bipdn9']/ span[contains(text(),'Пенсионное обслуживание')]")
     private WebElement pensionerCard;
 
     /**

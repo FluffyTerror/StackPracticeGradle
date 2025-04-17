@@ -8,10 +8,10 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 public class VesnaDepositPage extends BasePage {
 
-    @FindBy(css = "h1.chakra-text.css-1o3gv6l")
+    @FindBy(xpath = "//h1[contains(text(),'«Весна»')]")
     private WebElement Vesna;
 
-    @FindBy(css = "h1.css-uyawat")
+    @FindBy(xpath = "//h1[contains(text(),'Вклад')]")
     private WebElement Deposit;
 
     public void checkOpenVesnaPage() {

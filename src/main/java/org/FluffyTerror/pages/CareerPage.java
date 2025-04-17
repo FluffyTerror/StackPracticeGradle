@@ -6,16 +6,16 @@ import org.openqa.selenium.support.FindBy;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 public class CareerPage extends BasePage {
-    @FindBy(css = "a.chakra-link.css-vg2g2m a[href='/career/it']")
+    @FindBy(xpath = "//h3[@class = 'css-bipdn9']/span[contains(text(),'IT & Digital')]")
     private WebElement itCareer;
 
-    @FindBy(css = "h1.chakra-text.css-1o3gv6l")
+    @FindBy(xpath = "//h1[contains(text(), 'Твоя карьера.')]")
     private WebElement career;
 
-    @FindBy(css = "h1.css-uyawat")
+    @FindBy(xpath = "//h1[contains(text(), 'Твой банк.')]")
     private WebElement bank;
 
-    @FindBy(css = "div.css-np8lw6 a[href='/career/it']")
+    @FindBy(xpath = "//h3[@class = 'css-bipdn9']/span[contains(text(),'IT & Digital')]")
     private WebElement it;
 
 

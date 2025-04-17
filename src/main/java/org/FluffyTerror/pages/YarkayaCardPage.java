@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 public class YarkayaCardPage extends BasePage {
-    @FindBy(css = "h1.css-uyawat")
+    @FindBy(css = "h1.css-ujlgcp")
     public static WebElement yarkayaTitle;
 
     @FindBy(css = "input[name=\"lastName\"]")
@@ -18,38 +18,6 @@ public class YarkayaCardPage extends BasePage {
 
     @FindBy(css = "input[name=\"patronym\"]")
     public static WebElement patronymInput;
-
-    public WebElement getYarkayaTitle() {
-        return yarkayaTitle;
-    }
-
-    public void setYarkayaTitle(WebElement yarkayaTitle) {
-        this.yarkayaTitle = yarkayaTitle;
-    }
-
-    public WebElement getLastNameInput() {
-        return lastNameInput;
-    }
-
-    public void setLastNameInput(WebElement lastNameInput) {
-        this.lastNameInput = lastNameInput;
-    }
-
-    public WebElement getFirstNameInput() {
-        return firstNameInput;
-    }
-
-    public void setFirstNameInput(WebElement firstNameInput) {
-        this.firstNameInput = firstNameInput;
-    }
-
-    public WebElement getPatronymInput() {
-        return patronymInput;
-    }
-
-    public void setPatronymInput(WebElement patronymInput) {
-        this.patronymInput = patronymInput;
-    }
 
     public void checkOpenYarkayaPage() {
         waitUtilElementToBeVisible(yarkayaTitle);

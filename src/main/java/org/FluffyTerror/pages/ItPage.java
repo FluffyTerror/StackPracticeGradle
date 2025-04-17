@@ -6,10 +6,10 @@ import org.openqa.selenium.support.FindBy;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 public class ItPage extends BasePage {
-    @FindBy(css = "h1.chakra-text.css-1o3gv6l")
+    @FindBy(xpath = "//h1[contains(text(), 'прокачивайте экспертизу')]")
     private WebElement expertise;
 
-    @FindBy(css = "h1.css-uyawat")
+    @FindBy(xpath = "//h1[contains(text(), 'Развивайте финтех,')]")
     private WebElement finTech;
 
     public void checkOpenItPage() {

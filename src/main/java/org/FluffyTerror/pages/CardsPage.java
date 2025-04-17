@@ -7,10 +7,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class CardsPage extends BasePage {
 
-    @FindBy(css = "div.css-1eu0o0x")
+    @FindBy(css = "div.css-x7ci5t")
     private WebElement cardTitle;
 
-    @FindBy(css = "div.css-ebyn5d h2.css-il275z a[href='/retail/cards/debit/mcworld']")
+    @FindBy(xpath = "//div[@class ='css-1jk9zdi'] / a[@href='/retail/cards/debit/mcworld']")
 //не уверен, что стоило трогать...
     private WebElement aboutYarkaya;
 

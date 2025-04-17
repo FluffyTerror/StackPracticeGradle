@@ -7,16 +7,16 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 public class CreditPage extends BasePage {
 
-    @FindBy(css = "h1.chakra-text.css-1o3gv6l")
+    @FindBy(xpath = "//h1[contains(text(),'по кредиту')]")
     private WebElement credit;
 
-    @FindBy(css = "h1.css-uyawat")
-    private WebElement consumer;
+    @FindBy(xpath = "//h1[contains(text(),'Соберите свой кешбэк')]")
+    private WebElement cashback;
 
-    @FindBy(xpath = "//div[@class='css-pxyno3']//p[contains(text(), 'Сумма кредита')]/following-sibling::input[@type='text'] ")
+    @FindBy(xpath = "//div[@class='css-ykndue']//p[contains(text(), 'Сумма кредита')]/following-sibling::input[@type='text']")
     private WebElement creditSum;
 
-    @FindBy(xpath = "//div[@class='css-pxyno3']//p[contains(text(), 'Срок кредита')]/following-sibling::input[@type='text']")
+    @FindBy(xpath = "//div[@class='css-ykndue']//p[contains(text(), 'Срок кредита')]/following-sibling::input[@type='text']")
     private WebElement creditDuration;
 
     @FindBy(xpath = "//span[contains(text(), 'Получаю зарплату в Банке Санкт-Петербург')]")
@@ -25,17 +25,17 @@ public class CreditPage extends BasePage {
     @FindBy(xpath = "//span[contains(text(), 'Получаю пенсию в Банке Санкт-Петербург')]")
     private WebElement bankPensionCheckbox;
 
-    @FindBy(css = "h2.css-1bw6t7s")
+    @FindBy(css = "h2.css-1linwur")
     public static WebElement monthlyPayment;
 
 
     public void checkOpenCreditPage() {
-        waitUtilElementToBeVisible(consumer);
+        waitUtilElementToBeVisible(cashback);
         waitUtilElementToBeVisible(credit);
-        String title = consumer.getText() + ' ' + credit.getText();
+        String title = cashback.getText() + ' ' + credit.getText();
         assertThat(title)
                 .as("Заголовок отсутствует/не соответствует требуемому")
-                .isEqualTo("Потребительский кредит");
+                .isEqualTo("Соберите свой кешбэк по кредиту");
 
     }
 
