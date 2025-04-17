@@ -15,7 +15,7 @@ pipeline {
         stage('Run Tests') {
             steps {
                 echo "Выбранные теги: ${params.CUCUMBER_TAGS}"
-                bat "gradlew clean test -Dcucumber.filter.tags=\"${params.CUCUMBER_TAGS}\""
+                bat "gradle clean test -Dcucumber.filter.tags=\"${params.CUCUMBER_TAGS}\""
             }
         }
 
